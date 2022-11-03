@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>    
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\dependencies\simpleitk\SimpleITKCSharpNative.dll" Link="SimpleITKCSharpNative.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kitware.VTK" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SimpleITKCSharpManaged">
+      <HintPath>..\..\..\dependencies\simpleitk\SimpleITKCSharpManaged.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
